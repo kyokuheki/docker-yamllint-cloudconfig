@@ -28,6 +28,8 @@ def main(argv=None):
     users = list(map(itemgetter("name"), cc["users"]))
     dup_users = [k for k, v in Counter(users).items() if v > 1]
     print(f"duplicated users: {dup_users}")
+    if not dup_users:
+        return 0
 
     print("-- extract yaml --")
     dup_users_dict = sorted(
