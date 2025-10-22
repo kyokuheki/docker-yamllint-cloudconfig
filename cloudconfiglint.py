@@ -42,6 +42,7 @@ def main(argv=None):
     print(result.stderr)
     print(result.stdout)
 
+    return len(dup_users)
 
 if __name__ == '__main__':
     sys.exit(main())

@@ -1,7 +1,6 @@
 #!/bin/sh
 
-set -o errexit
-set -o nounset
+set -euo pipefail
 
 if [ "$1" -eq "--help" ] || [ "$#" -eq 0 ]; then
   echo Usage: docker run -it --rm -v /PATH/TO/YAML/FILE:/FILE:ro yamllint-cloudconfig /FILE [/FILE2]
